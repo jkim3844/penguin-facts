@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: #f0f8ff;
     color: #333;
     margin: 0;
@@ -9,19 +9,25 @@ body {
 
 /* Header styles */
 header {
-    background-color: #307dca;
+    background-color: #004080;
     color: white;
-    text-align: center;
     padding: 50px 0;
 }
 
 header h1 {
+    font-family: 'Impact', sans-serif;
     font-size: 2.5em;
     margin: 0;
+    text-align: left;
+    padding-left: 20px;
+    animation: slideInRight 1s ease-out; /* Apply animation */
 }
 
 header p {
     font-size: 1.2em;
+    text-align: left;
+    padding-left: 20px;
+    animation: slideInRight 1s ease-out 0.5s; /* Apply animation with delay */
 }
 
 /* Section styles */
@@ -31,22 +37,50 @@ header p {
 }
 
 #facts h2 {
-    text-align: center;
+    font-family: 'Impact', sans-serif;
     font-size: 2em;
     color: #004080;
     margin-bottom: 20px;
+    text-align: left;
+    animation: slideInRight 1s ease-out; /* Apply animation */
 }
 
-#facts ul {
-    list-style-type: square;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0;
+/* Fact sections */
+.fact-section {
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden; /* Ensure children don't overflow */
 }
 
-#facts li {
-    font-size: 1.2em;
+.fact-section h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #004080;
     margin-bottom: 10px;
+    text-align: left;
+    animation: slideInRight 1s ease-out; /* Apply animation */
+}
+
+.fact-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0;
+    animation: slideInRight 1s ease-out 0.5s; /* Apply animation with delay */
+}
+
+/* Image wrapping styles */
+.image-wrap {
+    float: right; /* Float image to the right */
+    margin-left: 20px; /* Space between image and text */
+    margin-bottom: 10px; /* Space below image */
+    animation: slideInLeft 1s ease-out; /* Apply animation */
+}
+
+.fact-image {
+    max-width: 150px; /* Adjust width as needed */
+    height: auto;
+    display: block;
 }
 
 /* Footer styles */
@@ -64,9 +98,34 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
-.dragon-image {
+
+/* Styles for the penguin image */
+.penguin-image {
     display: block;
     margin: 20px auto;
     max-width: 100%;
     height: auto;
+}
+
+/* Keyframe animations */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
