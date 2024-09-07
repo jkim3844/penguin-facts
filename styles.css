@@ -64,3 +64,9 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
+.dragon-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
